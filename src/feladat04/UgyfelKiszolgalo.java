@@ -14,6 +14,11 @@ public class UgyfelKiszolgalo implements Runnable{
     public UgyfelKiszolgalo(){
         elorejelzes = new HashMap<>();
         Beolvas();
+        feladat1();
+        feladat2();
+        feladat3();
+        feladat4();
+        feladat5();
     }
 
     @Override
@@ -40,5 +45,20 @@ public class UgyfelKiszolgalo implements Runnable{
         }catch (IOException ex){
             System.out.println(ex);
         }
+    }
+    private void feladat1(){
+
+    }
+    private void feladat2(){
+
+    }
+    private void feladat3(){
+
+    }
+    private void feladat4(){
+
+    }
+    private void feladat5(){
+
     }
 }
