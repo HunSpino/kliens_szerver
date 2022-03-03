@@ -1,15 +1,16 @@
 package feladat04;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import feladat03.Indian;
+
+import java.io.*;
+import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
 public class UgyfelKiszolgalo implements Runnable{
 
     private HashMap<String,Idojaras> elorejelzes;
+    private Socket kapcsolat;
 
     public UgyfelKiszolgalo(){
         elorejelzes = new HashMap<>();
@@ -23,7 +24,26 @@ public class UgyfelKiszolgalo implements Runnable{
 
     @Override
     public void run() {
+        try{
+            DataInputStream ugyfeltol = new DataInputStream(
+                    kapcsolat.getInputStream());
+            DataOutputStream ugyfelnek = new DataOutputStream(
+                    kapcsolat.getOutputStream());
+            while(true){
+                int menu;
+                Beolvas();
+                do{
+                    menu = ugyfeltol.readInt();
+                    switch (menu){
 
+                    }
+
+
+                }while(menu != -1);
+            }
+        }catch (IOException ex){
+            System.out.println(ex);
+        }
     }
     private void Beolvas(){
         try{
