@@ -35,11 +35,15 @@ public class UgyfelKiszolgalo implements Runnable{
                 do{
                     menu = ugyfeltol.readInt();
                     switch (menu){
-
+                        case 1:break;
+                        case 2:break;
+                        case 3:break;
+                        case 4:break;
+                        case 5:break;
                     }
 
 
-                }while(menu != -1);
+                }while(menu != 6);
             }
         }catch (IOException ex){
             System.out.println(ex);
